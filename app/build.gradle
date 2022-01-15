@@ -19,15 +19,20 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "Boolean", "USE_MOCK_BACKEND_API", 'true'
         buildConfigField "String", "BACKEND_API_URL", '"https://android-course-backend.herokuapp.com"'
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            buildConfigField "Boolean", "USE_MOCK_BACKEND_API", 'false'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        
+        mock {
+            buildConfigField "Boolean", "USE_MOCK_BACKEND_API", 'true'
+        }
+
     }
 
     buildFeatures {
