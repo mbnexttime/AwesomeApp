@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@+id/newsFragment">
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.example.androidcourse.ui.userlist.UserListFragment"
+        android:label="UserListFragment" />
+    <fragment
+        android:id="@+id/likesFragment"
+        android:name="com.example.androidcourse.infra.BaseFragment"
+        android:label="LikesFragment" />
+    <fragment
+        android:id="@+id/bookmarksFragment"
+        android:name="com.example.androidcourse.infra.BaseFragment"
+        android:label="BookmarksFragment" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.androidcourse.infra.BaseFragment"
+        android:label="NewsFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.androidcourse.ui.profile.ProfileFragment"
+        android:label="ProfileFragment">
+        <action
+            android:id="@+id/action_profileFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.androidcourse.ui.about.AboutFragment"
+        android:label="AboutFragment" />
+</navigation>
